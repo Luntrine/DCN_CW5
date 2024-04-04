@@ -1,0 +1,60 @@
+Oct 31 20:19:37.140 HYPERVISOR: Release 0.2.23-amd64/Darwin (tag 2023010200)
+Oct 31 20:19:37.141 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 51416.
+Oct 31 20:19:37.148 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 31 20:19:37.148 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/lucca/GNS3/projects/Lab-5-B/project-files/dynamips 
+Oct 31 20:19:37.148 GENERAL: working_dir=/Users/lucca/GNS3/projects/Lab-5-B/project-files/dynamips
+Oct 31 20:19:37.148 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/lucca/GNS3/projects/Lab-5-B/project-files/dynamips/b5f548cd-81ad-4fe2-843e-fa37b8529301 
+Oct 31 20:19:37.148 GENERAL: working_dir=/Users/lucca/GNS3/projects/Lab-5-B/project-files/dynamips/b5f548cd-81ad-4fe2-843e-fa37b8529301
+Oct 31 20:19:37.148 HYPERVISOR: exec_cmd: vm create R2 2 c2691 
+Oct 31 20:19:37.149 VM: VM R2 created.
+Oct 31 20:19:37.149 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5033 
+Oct 31 20:19:37.149 HYPERVISOR: exec_cmd: c2691 get_mac_addr R2 
+Oct 31 20:19:37.149 HYPERVISOR: exec_cmd: vm set_disk0 R2 0 
+Oct 31 20:19:37.150 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 31 20:19:37.150 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x60a48cb8 
+Oct 31 20:19:37.150 HYPERVISOR: exec_cmd: vm set_ios R2 /Users/lucca/GNS3/images/IOS/c2691-adventerprisek9-mz.124-25d.image 
+Oct 31 20:19:37.150 HYPERVISOR: exec_cmd: c2691 set_mac_addr R2 c002.fa2a.0000 
+Oct 31 20:19:37.151 HYPERVISOR: exec_cmd: vm set_nvram R2 256 
+Oct 31 20:19:37.151 HYPERVISOR: exec_cmd: vm set_ram R2 192 
+Oct 31 20:19:37.151 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 31 20:19:37.152 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 NM-1FE-TX 
+Oct 31 20:19:38.289 HYPERVISOR: exec_cmd: nio create_udp udp-418db423-b6e2-4baf-b35b-56bbd89cfc43 10036 127.0.0.1 10037 
+Oct 31 20:19:38.520 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-418db423-b6e2-4baf-b35b-56bbd89cfc43 
+Oct 31 20:19:38.521 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 31 20:19:38.920 HYPERVISOR: exec_cmd: nio create_udp udp-c163737e-04a0-42cf-8cb5-1204413cc379 10046 127.0.0.1 10047 
+Oct 31 20:19:38.922 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 1 0 udp-c163737e-04a0-42cf-8cb5-1204413cc379 
+Oct 31 20:19:38.922 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 31 20:19:38.949 HYPERVISOR: exec_cmd: nio create_udp udp-5bc7885a-34cf-4249-85a4-d993fa60dd46 10050 127.0.0.1 10051 
+Oct 31 20:19:38.950 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 1 udp-5bc7885a-34cf-4249-85a4-d993fa60dd46 
+Oct 31 20:19:38.950 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 31 20:19:52.670 HYPERVISOR: exec_cmd: vm create Ghost 0 c2691 
+Oct 31 20:19:52.670 VM: VM Ghost created.
+Oct 31 20:19:52.671 HYPERVISOR: exec_cmd: vm set_ios Ghost /Users/lucca/GNS3/images/IOS/c2691-adventerprisek9-mz.124-25d.image 
+Oct 31 20:19:52.671 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Oct 31 20:19:52.671 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost /Users/lucca/GNS3/projects/Lab-5-B/project-files/dynamips/c2691-adventerprisek9-mz.124-25d.image-192.ghost 
+Oct 31 20:19:52.671 HYPERVISOR: exec_cmd: vm set_ram Ghost 192 
+Oct 31 20:19:52.672 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Oct 31 20:19:52.673 HYPERVISOR: exec_cmd: vm set_config Ghost configs/i0_startup-config.cfg 
+Oct 31 20:19:52.673 HYPERVISOR: exec_cmd: vm start Ghost 
+Oct 31 20:19:52.943 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Oct 31 20:19:52.943 HYPERVISOR: exec_cmd: vm stop Ghost 
+Oct 31 20:19:53.138 VM: VM Ghost shutdown.
+Oct 31 20:19:53.138 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Oct 31 20:19:53.142 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Oct 31 20:19:53.142 VM: VM Ghost destroyed.
+Oct 31 20:19:53.144 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Oct 31 20:19:53.144 HYPERVISOR: exec_cmd: vm set_ghost_file R2 /Users/lucca/GNS3/projects/Lab-5-B/project-files/dynamips/c2691-adventerprisek9-mz.124-25d.image-192.ghost 
+Oct 31 20:19:53.144 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 31 20:19:53.145 HYPERVISOR: exec_cmd: vm set_config R2 configs/i2_startup-config.cfg 
+Oct 31 20:19:53.145 HYPERVISOR: exec_cmd: vm start R2 
+Oct 31 20:24:08.818 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 31 20:24:08.818 HYPERVISOR: exec_cmd: vm stop R2 
+Oct 31 20:24:08.943 VM: VM R2 shutdown.
+Oct 31 20:24:08.944 HYPERVISOR: exec_cmd: vm extract_config R2 
+Oct 31 20:24:09.104 HYPERVISOR: exec_cmd: vm get_status R2 
+Oct 31 20:24:09.104 HYPERVISOR: exec_cmd: vm extract_config R2 
+Oct 31 20:24:09.105 HYPERVISOR: exec_cmd: vm delete R2 
+Oct 31 20:24:09.105 VM: VM R2 destroyed.
+Oct 31 20:24:09.105 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 31 20:24:09.358 HYPERVISOR: Stopped.
+Oct 31 20:24:09.358 GENERAL: reset done.
